@@ -62,7 +62,7 @@
     <div id="app" class="flex flex-col h-full max-w-md mx-auto w-full bg-slate-50 shadow-2xl relative sm:rounded-xl sm:my-4 sm:h-[95vh] sm:border border-slate-200/60">
 
         <!-- Header -->
-        <header class="bg-gradient-to-r from-emerald-600 to-emerald-500 text-white shrink-0 z-20">
+        <header class="bg-[#316943] text-white shrink-0 z-20">
             <div class="p-4 flex justify-between items-center">
                 <div class="flex items-center gap-3">
                     <!-- 側邊欄選單按鈕 -->
@@ -602,7 +602,7 @@
                 const isMapLoading = ref(false);
                 const userLocation = ref(null);
                 const weather = ref({ temp: null, icon: 'ph-sun', code: 0, location: '', daily: [] });
-                const setup = ref({ destination: '福岡之旅', startDate: '2024-08-15', days: 8, rate: 0.215, currency: 'JPY', langCode: 'ja', langName: '日文' });
+                const setup = ref({ destination: '福岡之旅', startDate: '2026-08-15', days: 8, rate: 0.215, currency: 'JPY', langCode: 'ja', langName: '日文' });
 
                 // 智慧推薦系統
                 const recommendationsMap = reactive({});
@@ -891,19 +891,19 @@
 
                     const defaultId = 'trip_fukuoka_v8_aug15';
                     if (!list.find(t => t.id === defaultId)) {
-                        const defaultTripMeta = { id: defaultId, destination: '福岡之旅', startDate: '2024-08-15', daysCount: 8 };
+                        const defaultTripMeta = { id: defaultId, destination: '福岡之旅', startDate: '2026-08-15', daysCount: 8 };
 
                         const defaultDays = [
                             {
-                                date: '08/15 (四)', shortDate: '08/15', fullDate: '2024-08-15', title: '抵達 & 福岡市區', flight: null, photos: [], memoryText: '', showMemory: false,
+                                date: '08/15 (四)', shortDate: '08/15', fullDate: '2026-08-15', title: '抵達福岡市區', flight: null, photos: [], memoryText: '', showMemory: false,
                                 items: [
                                     { time: '19:20', type: 'flight', activity: '福岡機場落地', location: '福岡機場', note: '預計21:00到市區' },
                                     { time: '21:30', type: 'spot', activity: 'Check in 飯店、寄放行李', location: '博多站', note: '住宿：博多 Apartment hotel (D1-D3可洗衣)' },
-                                    { time: '22:00', type: 'food', activity: '天神屋台體驗氣氛', location: '天神', note: '備註：網友建議中洲屋台難吃，改去天神屋台' }
+                                    { time: '22:00', type: 'food', activity: '天神屋台體驗氣氛', location: '天神', note: '備註：中洲屋台難吃，改去天神屋台' }
                                 ]
                             },
                             {
-                                date: '08/16 (五)', shortDate: '08/16', fullDate: '2024-08-16', title: '系島一日遊', flight: null, photos: [], memoryText: '', showMemory: false,
+                                date: '08/16 (五)', shortDate: '08/16', fullDate: '2026-08-16', title: '系島一日遊', flight: null, photos: [], memoryText: '', showMemory: false,
                                 items: [
                                     { time: '08:30', type: 'transport', activity: '系島一日遊跟團出發', location: '博多', note: '行程點分散，跟團方便' },
                                     { time: '09:30', type: 'spot', activity: '櫻井二見浦夫婦巖', location: '櫻井二見浦', note: '' },
@@ -926,7 +926,7 @@
                                 ]
                             },
                             {
-                                date: '08/18 (日)', shortDate: '08/18', fullDate: '2024-08-18', title: '移動至萩市 (自由行)', flight: null, photos: [], memoryText: '', showMemory: false,
+                                date: '08/18 (日)', shortDate: '08/18', fullDate: '2026-08-18', title: '萩市買杯子之旅', flight: null, photos: [], memoryText: '', showMemory: false,
                                 items: [
                                     { time: '09:00', type: 'transport', activity: '搭新幹線 (博多->新山口)', location: '博多站', note: '約35-40分' },
                                     { time: '10:00', type: 'transport', activity: '搭巴士 (新山口->萩市)', location: '新山口站', note: '約75分。班次偏少，要先查好時刻' },
@@ -941,7 +941,7 @@
                                 ]
                             },
                             {
-                                date: '08/19 (一)', shortDate: '08/19', fullDate: '2024-08-19', title: '萩市 -> 長門湯本', flight: null, photos: [], memoryText: '', showMemory: false,
+                                date: '08/19 (一)', shortDate: '08/19', fullDate: '2026-08-19', title: '長門湯本一日溫泉之旅', flight: null, photos: [], memoryText: '', showMemory: false,
                                 items: [
                                     { time: '10:00', type: 'transport', activity: '前往長門湯本', location: '萩市', note: '大約40分鐘，中午前抵達' },
                                     { time: '11:00', type: 'spot', activity: '寄放行李', location: '長門湯本溫泉', note: '住宿：界長門。最早14:30可check in' },
@@ -954,7 +954,7 @@
                                 ]
                             },
                             {
-                                date: '08/20 (二)', shortDate: '08/20', fullDate: '2024-08-20', title: '長門湯本 -> 小倉', flight: null, photos: [], memoryText: '', showMemory: false,
+                                date: '08/20 (二)', shortDate: '08/20', fullDate: '2026-08-20', title: '小倉三大夜景', flight: null, photos: [], memoryText: '', showMemory: false,
                                 items: [
                                     { time: '10:00', type: 'transport', activity: '搭JR前往小倉', location: '長門湯本站', note: '' },
                                     { time: '12:00', type: 'food', activity: '午餐選擇', location: '小倉', note: '旦過市場烏龍麵 / shinshin拉麵 / [建議備選] 豚ステーキ専門店B 小倉本店' },
@@ -966,7 +966,7 @@
                                 ]
                             },
                             {
-                                date: '08/21 (三)', shortDate: '08/21', fullDate: '2024-08-21', title: '下關 ＋ 門司港', flight: null, photos: [], memoryText: '', showMemory: false,
+                                date: '08/21 (三)', shortDate: '08/21', fullDate: '2026-08-21', title: '下關門司港燒咖哩好好吃', flight: null, photos: [], memoryText: '', showMemory: false,
                                 items: [
                                     { time: '09:00', type: 'spot', activity: '門司港車站', location: '門司港車站', note: '先寄放行李' },
                                     { time: '10:00', type: 'spot', activity: '門司港懷舊展望室&紀念館', location: '門司港', note: '九州鐵道紀念館' },
@@ -977,7 +977,7 @@
                                 ]
                             },
                             {
-                                date: '08/22 (四)', shortDate: '08/22', fullDate: '2024-08-22', title: '太宰府 + 柳川 & 回程', flight: null, photos: [], memoryText: '', showMemory: false,
+                                date: '08/22 (四)', shortDate: '08/22', fullDate: '2026-08-22', title: '太宰府天滿宮拜拜去', flight: null, photos: [], memoryText: '', showMemory: false,
                                 items: [
                                     { time: '09:00', type: 'spot', activity: '太宰府天滿宮', location: '太宰府', note: '' },
                                     { time: '12:00', type: 'spot', activity: '柳川 or 市區Shopping', location: '柳川', note: '博多必買:努努雞,水炊鍋,牛腸鍋,明太子麵包' },
